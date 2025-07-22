@@ -8,10 +8,12 @@
         body{
             font-family: Arial, Helvetica, sans-serif;
         }
-
         table{
             width: 500px;
             border-collapse: collapse;
+            /*Para deixar o cabeçalho fixo na tela,
+            primeiro colocar o table como position relative*/
+            position: relative;
 
         }
         caption{
@@ -32,6 +34,15 @@
             background-color: gray;
             color: white;
         }
+
+        /*depois tem que fazer esse caminho
+        e colocar o position sticky e top -1.
+        */
+        thead > tr> th {
+            position: sticky;
+            top: -1px;
+            background-color: gray;
+        } 
         td.num{
             text-align: right;
         }
@@ -43,8 +54,8 @@
         Posso usar tbm o PAR(even) ou ÍMPAR(odd)
 
         Posso mudar tbm as cores com background-color
-        
         */
+
         tbody tr:nth-child(2n-1){
             background-color: lightgray;
         }
