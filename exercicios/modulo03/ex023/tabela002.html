@@ -14,6 +14,14 @@
             border-collapse: collapse;
 
         }
+        caption{
+            background-color: lightgray;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            
+        }
         td, th{
             border: 1px solid black;
             padding: 10px;
@@ -27,12 +35,26 @@
         td.num{
             text-align: right;
         }
+        /*Para adicionar o efeito zebrado
+        Posso pular de linha em linha usando a pseudoclass nth-child(2n(ou quantas vezes quiser ex; 3n, 4n, etc))
+
+        Posso usar tbm o nth-child(2n-1 que começara do primeiro)
+
+        Posso usar tbm o PAR(even) ou ÍMPAR(odd)
+
+        Posso mudar tbm as cores com background-color
+        
+        */
+        tbody tr:nth-child(2n-1){
+            background-color: lightgray;
+        }
     </style>
 </head>
 <body>
     <h1>Uso de Tabelas Grandes</h1>
     <!-- ANATOMIA PARA TABELAS GRANDES
-         TABLE 
+         TABLE
+            CAPTION = legenda da tabela
             THEAR = cabeça da tabela
                 TR, TD, TH
             TBODY = corpo da tabela
@@ -41,10 +63,11 @@
                 TR, TD, TH
     -->
     <table>
+        <caption>População das Unidades Federativas</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
 
             </tr>
         </thead>
@@ -160,7 +183,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td class="num"><strong>212 583 750</strong></td>
             </tr>
         </tfoot>
