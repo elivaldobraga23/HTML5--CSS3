@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudos de IFrame</title>
+</head>
+<body>
+    <h1>Testando o uso de uma iframe</h1>
+    <p>
+        Acessando o site do 
+        <!-- Por padrão o tamanho é de 300x150px -->
+        <!-- src é para adicionar o caminho -->
+        <!-- frameborder é a borda do iframe 
+         Só tem apenas 2 Parâmetros
+         -0 (sem bordar)
+         -1 (com borda)
+
+         pode ser configurado pelas CSS
+         
+        -->
+
+        <!-- Parâmetros scolling
+            - AUTO (patrão)
+                Se o conteúdo passar do tamanho do frame ele vai criar a barra de rolagem.
+            - YES
+                Mesmo que o conteúdo estivesse cabendo dentro do iframe ia aparecer o a barra de rolagem.
+            - NO 
+                Mesmo que o conteúdo ultrapasse o tamanho do frame, ele não vai rolar (Porem dependendo do navegador)
+        -->
+        
+        <iframe src="https://cursoemvideo.com" frameborder="0" height="500px" scolling="yes">
+            
+            <!-- Caso o navegador não suporte o iframe, vc pode colocar uma mensagem ou um link, como mensagem -->
+            <a href="https://www.cursoemvideo.com"></a>
+        
+        </iframe>
+        CursoemVideo</a> para aprender a programar</p>
+
+        <!-- Nem todos os sites permite o uso do Iframe -->
+        <p>O site do 
+            <iframe src="https://www.google.com.br" frameborder="0">
+            </iframe> é muito legal, pena que não funciona dentro do iframe!</p>
+
+        <p>
+            O repositório do Guanabara 
+            <iframe src="https://gustavoguanabara.github.io" frameborder="0" height="500px" width="500px" scolling="no"></iframe>
+            é bem legal
+
+        </p>
+
+</body>
+</html>
