@@ -12,9 +12,22 @@
 </head>
 <body>
     <h1>Meu Primeiro Formulário</h1>
-    <form>
-        <p>Nome: <input type="text" name="nome" id="nome"></p>
-        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+    <!-- Para desligar a sugestões autocomplete="off" -->
+     <!-- action, informa para onde o formulário será enviado -->
+      <!-- Em todo o input, necessita a utilização do name e do id
+                name = É utilizado para o HTML e PHP
+                id = É mais util para JavaScript e o Label -->
+    <form action="cadastro.php" autocomplete="off">
+        
+        <!-- o for do label identifica para qual input ele será usando, podendo usar o name ou o id -->
+        <p>
+            <label for="inome">Nome: </label>
+                <input type="text" name="nome" id="inome">
+        </p>
+        <p>
+            <label for="isobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="isobrenome">
+        </p>
         <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
