@@ -17,12 +17,40 @@
       <!-- Em todo o input, necessita a utilização do name e do id
                 name = É utilizado para o HTML e PHP
                 id = É mais util para JavaScript e o Label -->
-    <form action="cadastro.php" autocomplete="off">
+    <!-- MÉTODOS DE ENVIO DO FORMULÁRIO
+
+        GET 
+            - É o método padrão do HTML.
+            - Os dados aparece na URL.
+            
+                QUANDO USAR
+
+                    - Se os dados não forem sensíveis
+                    - Quando envia dados por get, só pode enviar até 3000 bytes
+                    - Se não tiver envio de arquivos
+        
+        POST
+            - Os dados são ocultos na URL.
+
+                QUANDO USADO
+                    - Dados Sensíveis
+                        Senhas, Números de Cartões (ideal usar https)
+                    - Se não quiser que os dados aparecem na URL
+                    - Se os dados ultrapassarem mais de 3000 bytes
+                    - Se precisar usar envio de arquivos
+
+
+        Podem ser modificados pela method
+        -->
+        
+    <form action="cadastro.php" autocomplete="off" method="post">
         
         <!-- O label é utilizado para que haja uma interação e com o texto e o elemento do formulário -->
 
         <!-- o for do label identifica para qual input ele será usando, podendo usar o name ou o id -->
-         
+
+        
+
         <p>
             <label for="inome">Nome: </label>
                 <input type="text" name="nome" id="inome">
