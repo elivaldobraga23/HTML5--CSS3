@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        
+/*     FLEX-WRAP - Empacotamento ou encapsulamento
+            Como a Capsula(contêiner vai se comportar)
+        
+        Configurações FLEX-WRAP
+
+        NOWRAP = Não Encapsule, Não Empacote (Não Quebre os conteúdos) / Patrão do FLEX-WRAP;
+            Os itens filhos irão encolher para caber no elemento pai(contêiner)
+                Esse colhimento vai depender do tipo de elemento que está dentro do contêiner.
+
+        WRAP = Encapsule, empacote;
+            Se encolher o elemento pai (contêiner),ira quebrar e o item irar seguir a do CROSS-AXIS (Eixo transversão).
+
+        WAP-REVERSE Encapsulamento reverso;
+            Se o elemento pai (contêiner), ira quebrar e o item irar seguir a direção contraria do CROSS-AXIS (Eixo transversão).
+*/
+/* FLEX-FLOW
+        FLEX-DIRECTION + FLEX-WRAP
+        FLEX-FLOW: ROW NOWRAP
+*/
+        div.conteiner{
+            background-color: lightsalmon;
+
+            display: flex;
+            /*flex-direction:row;
+            flex-wrap: nowrap;*/
+            flex-flow: row wrap;
+            
+            
+        }
+
+        div.itens{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex: auto;
+
+            
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens">Exemplo de bloco A</div>
+        <div class="itens">Exemplo de bloco B</div>
+        <div class="itens">Exemplo de bloco C</div>
+        <div class="itens">Exemplo de bloco D</div>
+        <div class="itens">Exemplo de bloco E</div>
+        <div class="itens">Exemplo de bloco F</div>
+        <div class="itens">Exemplo de bloco G</div>
+    </div>
+</body>
+</html>

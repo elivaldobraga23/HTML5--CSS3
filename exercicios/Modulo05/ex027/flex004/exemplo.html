@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUSTIFY-CONTENT</title>
+    <style>
+        body{
+            background-color: rgb(47, 47, 253);
+            width: 100vw;
+            margin: 20px;
+        }
+
+/*      
+ALINHAMENTO E ESPAÇAMENTO DOS ITENS NO CONTÊINER
+
+    OBS: O alinhamento e o espaçamento ocorre sempre seguindo a direção do MAIN-AXIS (Eixo Principal)
+
+    jUSTIFY-CONTENT
+        ALINHAMENTO
+
+    FLEX-START: Vai grudar o primeiro item exatamente no MAIN-STAR, O espaço livre vai ficar no final do lado do MAIN-END.  
+*/
+        div.conteiner_fs{
+            background-color: black;
+            width: 300px;
+            margin-left: 25px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+/*
+    FLEX-END: Vai grudar o último item exatamente no MAIN-END, e o espaço livre vai ficar no lado do MAIN-START
+
+*/
+        div.conteiner_fe{
+            background-color: black;
+            width: 300px;
+            margin-left: 25px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-end;
+        }
+/*
+    CENTER: Vai alinhar os elementos no centro do contêiner, e os espaços livres, irá ser dividido por igual no lado do MAIN-START e do MAIN-END.
+*/
+
+        div.conteiner_cen{
+            background-color: black;
+            width: 300px;
+            margin-left: 25px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+        }
+
+        div.conteiner_sb{
+            background-color: black;
+            width: 300px;
+            margin-left: 25px;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+
+        }
+
+
+        div.quadrado{
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+        }
+
+        h1, h2, h3, p{
+            color: white;
+        }
+
+        h3{
+            margin-left: 25px;
+        }
+    </style>
+</head>
+<body>
+    <h1>JUSTIFY-CONTENT</h1>
+
+    <h2>ALINHAMENTO</h2>
+
+    <h3>FLEX-START</h3>
+
+    <div class="conteiner_fs">
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+    </div>
+
+    <h3>FLEX-END</h3>
+
+    <div class="conteiner_fe">
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+    </div>
+
+    <h3>CENTER</h3>
+
+    <div class="conteiner_cen">
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+    </div>
+    
+    <h2>ESPAÇAMENTO</h2>
+    
+    <h3>SPACE-BETWEEN</h3>
+
+    <div class="conteiner_sb">
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+    </div>
+
+    <h3>SPACE-EVENLY</h3>
+
+    <div class="conteiner_se">
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+    </div>
+
+    <h3>SPACE-AROUND</h3>
+
+    <div class="conteiner_sa">
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+        <div class="quadrado"></div>
+    </div>
+</body>
+</html>

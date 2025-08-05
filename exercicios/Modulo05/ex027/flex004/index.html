@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+/*
+    ALINHAMENTO E ESPAÇAMENTO DOS ITENS NO CONTÊINER FLEX
+
+    OBS: O alinhamento e o espaçamento ocorrem sempre seguindo a direção do MAIN-AXIS (Eixo Principal)
+
+        JUSTIFY-CONTENT (Eixo Principal)
+        
+            ALINHAMENTO:
+
+                - FLEX-START: Alinha os itens no início do eixo principal (MAIN-START). 
+                O espaço livre fica ao final (MAIN-END).
+
+                - FLEX-END: Alinha os itens no final do eixo principal (MAIN-END).
+                O espaço livre fica no início (MAIN-START).
+
+                - CENTER: Centraliza os itens ao longo do eixo principal.
+                O espaço livre é dividido igualmente entre o início e o fim.
+
+            ESPAÇAMENTO:
+
+                - SPACE-BETWEEN: Coloca o primeiro item no início (MAIN-START) e o último no final (MAIN-END).
+                Os itens intermediários têm espaçamento igual entre si.
+
+                - SPACE-AROUND: Cria espaçamento igual ao redor de cada item.
+                Isso faz com que os espaços entre os itens sejam o dobro dos espaços nas extremidades.
+
+                - SPACE-EVENLY: Distribui os itens com espaçamento totalmente igual entre todos os itens,
+                incluindo o espaço nas extremidades.
+
+        ALIGN-ITEMS (Eixo Secundário / Transversal = CROSS-AXIS)
+
+            OBS: 
+                - Para ver o efeito do `align-items`, é preciso que o contêiner tenha altura definida.
+
+                - O ALIGN-ITEMS não cria espaçamentos entre itens, pode criar espaçamento usando o MARGIN-BOTTOM ou GAP (se for em um contêiner)
+
+            - STRETCH (valor padrão): Estica os itens para preencher toda a altura do eixo transversal.
+
+            - FLEX-START: Alinha os itens ao topo do eixo transversal.
+
+            - FLEX-END: Alinha os itens à base do eixo transversal.
+
+            - CENTER: Centraliza os itens verticalmente (no centro do eixo transversal).
+
+*/
+
+        
+        div.conteiner{
+            background-color: lightsalmon;
+            height: 300px;
+
+            display: flex;
+            /*flex-direction:row;
+            flex-wrap: nowrap;*/
+            flex-flow: row wrap;
+            
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+
+        div.itens{
+            background-color: lightblue;
+            
+            border: 1px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">D</div>
+        <div class="itens">E</div>
+        <div class="itens">F</div>
+        <div class="itens">G</div>
+    </div>
+</body>
+</html>
