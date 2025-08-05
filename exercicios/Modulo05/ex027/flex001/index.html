@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+        div.conteiner{
+            background-color: lightsalmon;
+            display: flex;
+
+            /* FLEX DIRECTION
+
+   Define a direção dos itens dentro de um contêiner flexível.
+
+   Quando usamos `flex-direction`, o flex container cria dois eixos:
+   - MAIN AXIS (Eixo Principal)
+   - CROSS AXIS (Eixo Secundário ou Transversal)
+
+   Cada eixo possui dois pontos:
+   - START (Início)
+   - END (Fim)
+
+   Eixos padrões com `flex-direction: row`:
+   ------------------------------------------
+   - MAIN AXIS: horizontal (esquerda → direita)
+       - MAIN START: esquerda
+       - MAIN END: direita
+
+   - CROSS AXIS: vertical (cima → baixo)
+       - CROSS START: topo
+       - CROSS END: fundo
+
+   Comportamentos conforme o valor de `flex-direction`:
+   -----------------------------------------------------
+   - `row` (padrão):            MAIN = esquerda → direita | CROSS = cima → baixo
+   - `row-reverse`:             MAIN = direita → esquerda | CROSS = cima → baixo
+   - `column`:                  MAIN = cima → baixo       | CROSS = esquerda → direita
+   - `column-reverse`:          MAIN = baixo → cima       | CROSS = esquerda → direita
+
+   IMPORTANTE:
+   - Apenas o eixo principal (MAIN AXIS) muda com o `flex-direction`.
+   - O CROSS AXIS mantém a mesma direção (perpendicular ao MAIN AXIS).
+*/
+
+        }
+
+        div.itens{
+            background-color: lightblue;
+            border: 1px solid black;
+            flex: auto;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">D</div>
+        <div class="itens">E</div>
+        <div class="itens">F</div>
+        <div class="itens">G</div>
+    </div>
+</body>
+</html>
