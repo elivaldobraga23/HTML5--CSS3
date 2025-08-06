@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box (Anatomia dos Itens Flexbox)</title>
+    <style>
+/*
+        FLEX-ITENS (Itens Flexíveis)
+            Por patrão os itens não são flexíveis.
+
+            ORDER: Ordena os elementos em ordem crescente. 
+                Todo item em flexbox, que está dentro do elemento pai(contêiner) vai ter o ORDER:0 por patrão
+
+            ALIGN-SELF: Se aplica a cada um dos itens, vai ter um alinhamento diferente. se aplica aos itens e vai funcionar diretamente no CROSS-AXIS(Eixo Transversão)
+
+                AUTO: Vai herdar a característica de alinhamento vertical do elemento pai, seja o ALIGN-CONTENT ou o ALIGN-ITEM o que estiver configurado no pai
+
+                FLEX-START: É o alinhamento perto do CROSS-START.
+
+                FLEX-END: É po alinhamento perto do CROSS-END.
+
+                CENTER: Que vai calcular o meio entre o CROSS-START e o CROSS-END e colocar o item no centro
+
+                STRETCH: Que vai esticar o item para que ocupe o espaço inteiro do CROSS-EXIS do contêiner.*/
+
+        div.conteiner{
+            background-color: lightsalmon;
+            height: 400px;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-items: stretch;
+
+        }
+
+        div.itens{
+            background-color: lightblue;
+            padding: 20px;
+            border: 1px solid black;
+
+        }
+
+        div#i1{
+            align-self: auto;
+        }
+        div#i2{
+            align-self: auto;
+        }
+        div#i3{
+            align-self: flex-end;
+        }
+        div#i4{
+            align-self: auto;
+        }
+        div#i5{
+            align-self: center;
+        }
+        div#i6{
+            align-self: flex-start;
+        }
+        div#i7{
+            align-self: stretch;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens" id="i1">A</div>
+        <div class="itens" id="i2">B</div>
+        <div class="itens" id="i3">C</div>
+        <div class="itens" id="i4">D</div>
+        <div class="itens" id="i5">E</div>
+        <div class="itens" id="i6">F</div>
+        <div class="itens" id="i7">G</div>
+
+    
+    </div>
+</body>
+</html>
