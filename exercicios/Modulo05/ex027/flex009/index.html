@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Propriedades flex-basis em Flexbox</title>
+    <style>
+/*
+        FLEX-ITENS (Itens Flexíveis)
+            Por patrão os itens não são flexíveis.
+
+            FLEX-BASIS
+                Para o tamanho dos itens
+
+                AUTO(Valor Patrão): O tamanho do elemento no eixo principal é ditada do tamanho do seu conteúdo 
+
+                POSSO SUBSTITUI O VALOR AUTO POR UM TAMANHO
+                    200px: Assim todos os elementos irão ficar com 200px, porém se o contêiner for diminuído ele vai perder esse valor para caber no contêiner.
+*/
+
+        div.conteiner{
+            background-color: lightsalmon;
+
+
+            display: flex;
+            flex-flow: row nowrap;
+            
+
+        }
+
+        div.itens{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens" id="i1">A</div>
+        <div class="itens" id="i2">Outro conteúdo</div>
+        <div class="itens" id="i3">C</div>
+        <div class="itens" id="i4">conteúdo um pouco maior</div>
+        <div class="itens" id="i5">E</div>
+        <div class="itens" id="i6">conteúdo maior ainda, que vai ocupar mais espaços</div>
+        <div class="itens" id="i7">G</div>
+
+    
+    </div>
+</body>
+</html>

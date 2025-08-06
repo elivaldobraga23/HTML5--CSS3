@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle do tamanho de itens flexíveis</title>
+    <style>
+/*
+        FLEX-ITENS (Itens Flexíveis)
+            Por patrão os itens não são flexíveis.
+
+            FLEX-SHRINK: Pode encolher?
+                Por Patrão flex-shrink é 1.
+                se o valor for 0, significa que ele não pode encolher, se for diferente de 0 e positivo significa que pode encolher
+
+            FLEX-GROW: pode aumentar?
+                Por patrão flex-grow é 0.
+                Se o valor for 0, significa que não pode aumentar / crescer
+                se for diferente de 0 e positivo, significa que pode aumentar/crescer
+
+*/
+
+        div.conteiner{
+            background-color: lightsalmon;
+            display: flex;
+            flex-flow: row nowrap;
+            
+
+        }
+
+        div.itens{
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 200px;
+        }
+
+        div#cxA{
+            flex-shrink: 0;    
+            flex-grow: 1;
+        }
+
+        div#cxB{
+            flex-shrink: 1;    
+            flex-grow: 1;    
+        }
+
+        div#cxC{
+            flex-shrink: 8;    
+            flex-grow: 1;
+            
+        }  
+
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens" id="cxA">A</div>
+        <div class="itens" id="cxB">B</div>
+        <div class="itens" id="cxC">C</div>
+    </div>
+</body>
+</html>
