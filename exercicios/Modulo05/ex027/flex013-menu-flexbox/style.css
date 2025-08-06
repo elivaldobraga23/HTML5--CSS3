@@ -26,12 +26,15 @@ header{
 }
 
 header > h1{
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
+
     flex: 0 0 200px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.425);
 }
 
 header > nav{
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
+
     display: flex;
     flex-flow: row wrap;
 }
@@ -54,7 +57,7 @@ header a:hover{
 
 main{
     background-color: white;
-    margin: auto;
+    margin: 20px;
     margin-top:25px;
     padding: 10px;
     border-radius: 10px;
@@ -71,3 +74,19 @@ main > p{
     padding: 10px;
 }
 
+@media screen and (max-width: 580px) {
+
+    header, header > nav{
+        flex-flow: column nowrap;
+
+    }
+
+    header > h1{
+        flex-basis: 50px;
+    }
+
+    header a{
+        width: 90vw;
+    }
+    
+}
