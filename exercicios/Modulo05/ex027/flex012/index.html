@@ -18,6 +18,29 @@
                 Se o valor for 0, significa que não pode aumentar / crescer
                 se for diferente de 0 e positivo, significa que pode aumentar/crescer
 
+
+                SHORTHAND FLEX
+                    flex: 1º flex-grow 2º flex-shrink 3º flex-basis
+                        EXEMPLO: 
+                            flex: 0 1 150px
+                                flex-grow   = 0
+                                flex-shrink = 1
+                                flex basis  = 150px
+
+                    VALORES PATRÕES
+                        flex: 0 1 auto
+                        flex: initial
+                            que é a mesma coisa de flex: 0 1 auto
+
+                        flex: 0 0 auto (não ser flexível)
+                        flex:none
+
+                        flex: 1 1 auto (Flex flexível)
+                        flex: auto
+
+                        Se colocar apenas um valor, quer dizer que o FLEX-GROW vai receber o valor 3,  e o restante será o patrão
+                            flex: 3
+                                flex: 3 1 auto
 */
 
         div.conteiner{
@@ -30,22 +53,35 @@
             background-color: lightblue;
             border: 1px solid black;
             text-align: center;
-            flex-basis: 200px;
         }
 
         div#cxA{
-            flex-shrink: 0;    
+            /*flex-shrink: 0;    
             flex-grow: 1;
+            flex-basis: 200px;*/
+
+            flex:  1 0 200px;
+
         }
 
         div#cxB{
-            flex-shrink: 1;    
-            flex-grow: 1;    
+            /*flex-shrink: 1;    
+            flex-grow: 1; 
+            flex-basis: 150px;*/
+
+            flex: 1 1 150px;
+
         }
 
         div#cxC{
-            flex-shrink: 8;    
+            /*flex-shrink: 8;    
             flex-grow: 1;
+            flex-basis: auto;*/
+            flex: 1 0 auto;
+
+
+
+
             
         }  
 
