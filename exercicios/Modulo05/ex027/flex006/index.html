@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box (Conteúdo Empacotado) </title>
+    <style>
+/*      CONTEÚDO EMPACOTADO
+
+            ALIGN-CONTENT
+                Alinha e espalha os elementos do CROSS-AXIS (Eixo-Transversão) mas quando estão empacotados.
+
+                ALINHAMENTO
+
+                    STRETCH (Valor Patrão): Vai pegar toda área disponível do contêiner vai dividir por números de linhas ou colunas,  vai esticar o elemento para ocupar toda área que foi dividida.
+
+                    FLEX-START: Vai pegar todos os elementos e grudar no CROSS-START do CROSS-AXIS, e gruda o espaço em branco no CROSS-END
+
+                    FLEX-END: Vai grudar todos os elementos no CROSS-END e vai grudar o espaço em branco no CROSS-START do CROSS-AXIS.
+
+                    CENTER: Vai criar espaços em branco no CROSS-START e no CROSS-END, e vai colocar os elementos no CENTRO.
+
+                ESPAÇAMENTO
+
+                    SPACE-BETWEEN: vai colocar os elementos colados no CROSS-STAR e no CROSS-END, e vai o espaço em branco vai ficar no meio
+
+                    SPACE-EVENLY: Vai colocar um espaço em branco calculado no CROSS-START e no CROSS-END, e vai colocar outro espaço em branco no meio dos elementos do mesmo tamanho.
+
+                    SPACE-AROUND: Divide o CROSS_AXIS em partes iguais, e dentro dessas áreas demarcada vai centralizar os elementos
+*/
+
+        div.conteiner{
+            background-color: lightsalmon;
+            height: 400px;
+
+            display: flex;
+            flex-flow: row wrap;
+            align-content: space-around;
+
+
+
+        }
+
+        div.itens{
+            background-color: lightblue;
+            padding: 40px;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="itens">A</div>
+        <div class="itens">B</div>
+        <div class="itens">C</div>
+        <div class="itens">D</div>
+        <div class="itens">E</div>
+        <div class="itens">F</div>
+        <div class="itens">G</div>
+        <div class="itens">H</div>
+        <div class="itens">I</div>
+        <div class="itens">J</div>
+        <div class="itens">L</div>
+        <div class="itens">M</div>
+    
+    </div>
+</body>
+</html>
