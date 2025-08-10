@@ -1,0 +1,105 @@
+GRID LAYOUT
+
+O Que é Grid Layout?
+    - É um sistema para criação de layout baseado em uma grade bidimensional e otimizado para design de interfaces de usuário. Nesse modelo de grade, os elementos-filhos do contêiner que defina a grade podem ser posicionados livremente em espaços criados na estrutura, quer ela tenha sio definida com suas dimensões flexíveis ou fixas.
+
+A Anatomia de um Grid
+
+    Grid Container = Todo o contêiner do Grid, o pai de todos, a parte de fora;
+    Grid Item = item de grade, quantos os pontos se cruzam;
+    Grid Track = Vários itens que vai do inicio da grade até o final na mesma linha, tando horizontalmente quando verticalmente;
+    Row Track = Track deitada, trilha de linha;
+    Column Track = Track em pé, Trilha de coluna;
+    Grid Line = Linhas da Grade, Podem ser as linhas verticais ou horizontais, e são numeradas, da esquerda para a direita e de cima para baixo, podendo também contar as grid line, em modo negativo, começando da direita para a esquerda, ou de baixo para cima;
+    Grid Area = quando pego um conjunto de elementos e formo um agrupamento;
+    grid gap = Espaços entre os elementos;
+
+
+Propriedades do Container para Grid
+
+    display = display: grid;
+        formar o item um grid container, e tudo dentro dele se torna itens.
+
+    grid-template-columns = para informar quantas colunas terá o grid;
+
+    grid-template-rows = Para indicar quantas linhas terá no grid;
+
+    grid-gap = Para informa o espaçamento entre os itens;
+
+    align-items = Alinhamento Vertical dos itens;
+
+        STRETCH(patrão) = Esticar o item até ele caber dentro da grade;
+        START = Todos os itens irá para a parte de cima do elemento;
+        END = Todos os itens vão para a parte de baixo do elemento;
+        CENTER = Colocar os itens no meio verticalmente;
+
+    justify-items = Alinhamento horizontal dos itens;
+
+        STRETCH(patrão) = Esticar o item até ele caber dentro da grade;
+        START = Todos os itens irá para a esquerda do elemento;
+        END = Todos os itens vão para direita do elemento;
+        CENTER = Colocar os itens no meio verticalmente;
+
+    align-content =  Alinhamento vertical do conteúdo;
+
+        START(patrão) = Todos os itens irá para a parte de cima do elemento;
+        END = Todos os itens vão para a parte de baixo do elemento;
+        CENTER = Colocar os itens no meio verticalmente;
+        SPACE-BETWEEN = Separa as linhas de itens com espaços iguais entre elas, 
+                    mas sem espaço no topo e no final do container;
+        SPACE-AROUND = Distribui espaço igual ao redor de cada linha de itens,
+                    criando meio espaço no topo e no final;
+        SPACE-EVENLY = Distribui espaço igual entre todas as linhas e também
+                    espaço igual no topo e no final do container.
+
+
+    justify-content = Alinhamento horizontal do conteúdo;
+
+        FLEX-START (padrão) = Todos os itens vão para o início do container (lado esquerdo em layout LTR);
+        FLEX-END = Todos os itens vão para o final do container (lado direito em layout LTR);
+        CENTER = Centraliza todos os itens no meio horizontalmente;
+        SPACE-BETWEEN = Separa os itens com espaços iguais entre eles, 
+                        sem espaço no início e no final do container;
+        SPACE-AROUND = Distribui espaço igual ao redor de cada item, 
+                    criando meio espaço no início e no final;
+        SPACE-EVENLY = Distribui espaço igual entre todos os itens 
+                    e também no início e no final do container.
+
+    grid-auto-row = Para sempre que eu quiser acrescentar uma nova linha.
+        se no grid-template-rows, eu adicionar apenas, grid-template-rows: 100px 100px 100px;, ele irar adicionar apenas 3 linhas com 100px, e caso eu queira adicionar mais uma linha, ao adicionar, o próximo elemento, não irar ter 100px, pq eu configurei apenas 3 elementos, por isso usa o grid-auto-row, para ao adicionar um elemento, ele seja adicionado já configurado;
+
+    grid-auto-column = Para sempre que eu quiser acrescentar uma nova coluna.
+        se no grid-template-columns, eu adicionar apenas, grid-template-columns: 100px 100px 100px;, ele irar adicionar apenas 3 colunas com 100px, e caso eu queira adicionar mais uma coluna, ao adicionar, o próximo elemento, não irar ter 100px, pq eu configurei apenas 3 elementos, por isso usa o grid-auto-column, para ao adicionar um elemento, ele seja adicionado já configurado;
+
+    place-items = Vai configurar de forma simplificada o align-items e o justify-items,
+        1º o align-items e 2º o justify-content;
+
+    place-content = Vai configurar de forma simplificada o align-content e o justify-content,
+        1º o align-content  e p 2º justify-content;
+
+    grid-template = Configura o grid-template-columns e o grid-template-rows,
+        1º grid-template-rows e o 2º grid-template-columns separados por barra '/';
+
+    função repeat() = posso usar essa função para indicar repetições de valores;
+        EXEMPLO = grid-template-columns: auto auto auto;
+                    posso usar: 
+                        grid-template-columns: repeat (3, auto);
+                  grid-template-rows: 100px 100px 100px;
+                        grid-template-rows: repeat(3, 100px);
+                  grid-template: 100px 100px 100px / auto auto auto;
+                        grid-template: repeat(3, 100px) / repeat(3, auto);
+
+    unidade fraction (fração) = é usado para medir como fração 'fr'.
+        se eu tiver um contêiner de 1500px, e quiser 3 colunas com o mesmo tamanho, ao invés de usar auto, eu posso usar grid-template-columns: 1fr 1fr 1fr; e vai dividir a coluna em 3 pedaços com o mesmo tamanho. podendo usar tbm o repeat;
+
+
+        Pode ocorrer de ter que usar unidades mistas
+
+        grid-template-columns: 100px 20% 1fr 1fr
+        digamos que essa seja uma configuração de um contêiner de 1500px
+
+            Os 100px vai ocupar 100px da área do contêiner;
+            20% vai pegar 20% do total do contêiner, nesse casso 20% de 1500px
+
+            já as frações vai pegar o que sobrou dos 100px e dos 20%
+                se foram pegos 100px e 20% que são 300px dos 15000, restaram 1100px, esse valor é que vai ser usado na fração;
