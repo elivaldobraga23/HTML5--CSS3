@@ -15,7 +15,7 @@ A Anatomia de um Grid
     grid gap = Espaços entre os elementos;
 
 
-Propriedades do Container para Grid
+PROPRIEDADES DO CONTAINER PARA GRID
 
     display = display: grid;
         formar o item um grid container, e tudo dentro dele se torna itens.
@@ -65,6 +65,13 @@ Propriedades do Container para Grid
         SPACE-EVENLY = Distribui espaço igual entre todos os itens 
                     e também no início e no final do container.
 
+    grid-auto-flow = define como os itens que não têm posição explícita definida serão dispostos dentro do grid. Ele controla a direção e a forma de preenchimento automático das células que sobraram.
+
+        ROW (padrão)	Preenche automaticamente linha por linha (da esquerda para a direita, depois de cima para baixo).
+        COLUMN	Preenche coluna por coluna (de cima para baixo, depois da esquerda para a direita).
+        ROW DENSE	Igual ao row, mas tenta preencher “buracos” deixados por itens maiores.
+        COLUMN DENSE	Igual ao column, mas também tenta preencher “buracos” deixados por itens maiores.
+
     grid-auto-row = Para sempre que eu quiser acrescentar uma nova linha.
         se no grid-template-rows, eu adicionar apenas, grid-template-rows: 100px 100px 100px;, ele irar adicionar apenas 3 linhas com 100px, e caso eu queira adicionar mais uma linha, ao adicionar, o próximo elemento, não irar ter 100px, pq eu configurei apenas 3 elementos, por isso usa o grid-auto-row, para ao adicionar um elemento, ele seja adicionado já configurado;
 
@@ -103,3 +110,38 @@ Propriedades do Container para Grid
 
             já as frações vai pegar o que sobrou dos 100px e dos 20%
                 se foram pegos 100px e 20% que são 300px dos 15000, restaram 1100px, esse valor é que vai ser usado na fração;
+
+PROPRIEDADES DE ITEMS NO GRID LAYOUT
+
+    grid-row-start = Indica a linha do começo;
+
+    grid-row-end =  Indica a linha final;
+
+    grid-column-start = Indica a coluna de inicio;
+
+    grid-column-end = Indica a coluna final;
+
+    span = Usa-se para dar a ideia de expandir, ao invés de colocar grid-row-end (pode ser qualquer outro): 4;, eu posso usar o grid-row-end: span 3; pq ele vai começar o grid-row-start na linha 1 (ou em qualquer outra) e vai se expandir pulando 3 linhas, nesse caso. na contagem do span, sempre começa na próxima linha, nesse exemplo, ele pula a linha 1, começa a contar na linha 2 e conta 3, até chegar na 4ª linha.
+
+    SIMPLIFICAÇÃO 
+        grid-row = Ao invés de usar o grid-row-start e o grid-row-end, pode ser simplificado GRID-ROW: o start vem primeiro separados por uma barra "/" e depois o end.
+            grid-row-start: 1;
+            grid-row-end: 4;
+
+            grid-row: 1 / 4;
+            grid-row 1 / span 3;
+
+        grid-column = Simplifica o usado do grid-column-start e o grid-column-end,  do mesmo modo, o start vem primeiro e depois o end separados por barra "/";
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            grid-column: 1 / 3;
+            grid-column: 1 / span 2;
+
+        grid-area = Simplificação do grid-row e grid-column, a ordem é,  1º o grid-row-start, 2º grid-column-start, 3º grid-row-end e 4º grid-column-end,  todos separados por barra "/";
+            grid-row-start: 1;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+
+            grid-area: 1 (grid-row-start) / 1 (grid-column-start) / 4 (grid-row-end) / 3 (grid-column-end)
